@@ -1,0 +1,81 @@
+.cardSlider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.sliderContainer {
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  justify-content: space-around;
+  gap: 20px;
+ 
+}
+
+.card {
+  flex: 1 0 calc(25% - 20px); /* Adjusted to fit 4 cards and the gap */
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0; /* No margin needed, gap will handle spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid black;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .card {
+    flex: 1 0 calc(33.33% - 19px); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 900px) {
+  .card {
+    flex: 1 0 calc(50% - 19px); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 1 0 calc(100% - 19px); /* 1 card per row */
+  }
+}
+
+.prevButton,
+.nextButton {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.prevButton {
+  margin-right: 15px;
+}
+
+.nextButton {
+}
+
+.prevButton:disabled,
+.nextButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.mains {
+  display: flex;
+  padding: 0px 40px 0px 40px;
+}
+
